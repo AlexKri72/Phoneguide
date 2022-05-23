@@ -32,7 +32,7 @@ def run():
     temp = ui.initial()
     guide = download_guide(temp)
     temp = ui.next_operation()
-    while temp[0] != 3:
+    while temp[0] != 4:
 
         if temp[0] == 1 and temp[1] == 'col':
             download_guide('col')
@@ -48,4 +48,7 @@ def run():
 
         if temp[0] == 2 and temp[1] == 'row':
             upload_guide('row', guide)
+            temp = ui.next_operation()
+        if temp[0] == 3:
+            print(ui.added_abonent(guide))
             temp = ui.next_operation()
