@@ -1,7 +1,7 @@
 import csv
 
 
-def export_col(list):
+def export_col(list):  # экспорт в файл колонкой
     with open('output_col.csv', 'w') as file:
         for i in range(0, len(list)):
             for j in range(0, 4):
@@ -11,7 +11,7 @@ def export_col(list):
             file.write(f'\n')
 
 
-def export_row(list):
+def export_row(list):  # экспорт в файл строчкой
     with open('output_row.csv', 'w') as file:
         for i in range(len(list)):
             a = ''

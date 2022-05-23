@@ -3,6 +3,8 @@ import export_file
 import ui
 import numpy as np
 
+# импорт из файлов с разными формами записи с переводом в одинаковый двумерный массив
+
 
 def download_guide(a):
     if a == 'col':
@@ -18,7 +20,7 @@ def download_guide(a):
     return in_list2
 
 
-def upload_guide(a, massive):
+def upload_guide(a, massive):  # выгрузка в файл
     if a == 'col':
         export_file. export_col(massive)
     if a == 'row':
